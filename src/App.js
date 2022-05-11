@@ -1,11 +1,19 @@
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
 
 function App() {
   return (
     <>
-        <Navbar />
-        <h2>Ofertas de la semana</h2>
+    <ThemeProvider theme={darkTheme}>
+      <Navbar />
+    </ThemeProvider>
+        
     </>
   );
 }

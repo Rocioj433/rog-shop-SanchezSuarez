@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap');
+*{
+    font-family: 'Radio Canada', sans-serif;
+}
+h1{
+    font-size: 14px;
+}
+.list-item{
+    list-style: none;
+    display: flex;
+    padding-left: 400px;
+    padding-right: 500px;
+}
+.list-item li{
+    margin:10px;
+}
+.list-item li button{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.btn-login{
+    border: 2px solid gray;
+    padding-left: 100px;
+}
