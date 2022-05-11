@@ -13,16 +13,16 @@ export const Navbar = () => {
           <h1>Republic of Gamers</h1>
           <ul className='list-item'>
             <li>
-              <button>Home</button>
+            <a href='home'><button>Home</button></a>
             </li>
             <li>
-              <button>Product</button>
+            <a href='home'><button>Product</button></a>
             </li>
             <li>
-              <button>Contact</button>
+            <a href='home'><button>Contact</button></a>
             </li>
             <li>
-              <button>FQA</button>
+            <a href='home'><button>FQA</button></a>
             </li>
           </ul>
           <Button className='btn-login' color="inherit" justify-content="flex-end">Login</Button>

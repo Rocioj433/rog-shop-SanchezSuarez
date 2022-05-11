@@ -15,8 +15,11 @@ h1{
     margin:10px;
 }
 .list-item li button{
-    border: 1px solid #ccc;
+    border:none;
     border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
 }
 .btn-login{
     border: 2px solid gray;
