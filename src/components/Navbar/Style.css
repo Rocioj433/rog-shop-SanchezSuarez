@@ -8,11 +8,16 @@ h1{
 .list-item{
     list-style: none;
     display: flex;
-    padding-left: 400px;
-    padding-right: 500px;
+    padding-left: 600px;
+    padding-right: 750px;
 }
 .list-item li{
     margin:10px;
+}
+.list-item a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
 .list-item li button{
     border:none;
