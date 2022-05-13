@@ -8,8 +8,8 @@ h1{
 .list-item{
     list-style: none;
     display: flex;
-    padding-left: 600px;
-    padding-right: 750px;
+    padding-left: 400px;
+    padding-right: 400px;
 }
 .list-item li{
     margin:10px;
@@ -20,11 +20,34 @@ h1{
     font-size: 14px;
 }
 .list-item li button{
-    border:none;
-    border-radius: 5px;
-    background-color: transparent;
+    background: transparent;
     color: white;
     cursor: pointer;
+    text-transform: none;
+}
+.list-item li button:hover{
+    background: none !important;
+    box-shadow: none !important;
+}
+.list-item li button::after{
+    content:'';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    box-shadow: 0%;
+    background-color: white;
+
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+}
+.list-item li button:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+    
 }
 .btn-login{
     border: 2px solid gray;

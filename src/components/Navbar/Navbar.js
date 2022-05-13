@@ -2,6 +2,7 @@ import React from 'react';
 import {AppBar, Toolbar, Button} from '@mui/material';
 import style from '../Navbar/Style.css';
 import { navBarOptions } from '../../helpers/strings';
+import CartWidget from '../Card/CartWidget';
 
 
 export const Navbar = () => {
@@ -19,8 +20,8 @@ export const Navbar = () => {
               })}
 
             </ul>
-          }
-          <Button className='btn-login' color="inherit" justify-content="flex-end">Login</Button>
+}
+          <Button className='btn-login' disableRipple color="inherit" variant='text'>  <CartWidget /> </Button>
         </Toolbar>
       </AppBar>
     </>
