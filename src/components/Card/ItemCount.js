@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardStyle from '../Card/CardStyle.css'
+import {Card, CardContent} from '@mui/material';
+import '../Card/CardStyle.css'
 
 const ItemCount = ({stock, initial}) => {
     const [count, setCount] = useState(initial);
     const onAdd = () => {
-        setCount(count + 1);
+        setCount(prev => prev + 1);
     }
 
     const handleSubtract = () => {
         if(count > 0 || count < stock) {
-            setCount(count - 1);
+            setCount(prev => prev - 1);
         }
     }
   return (
