@@ -1,5 +1,5 @@
 import React from 'react'
-import CardStyle from '../Card/CardStyle.css'
+import '../Card/CardStyle.css'
 import ItemCount from './ItemCount'
 
 const ItemListContainer = ({title}) => {
