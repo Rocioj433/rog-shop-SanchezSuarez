@@ -12,7 +12,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Navbar />
-      <ItemListContainer title={"Productos recomendados"}/>
+      <ItemListContainer title={"Productos recomendados"} />
     </ThemeProvider>
   );
 }

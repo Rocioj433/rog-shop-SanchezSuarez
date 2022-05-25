@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import {Card, CardContent} from '@mui/material';
 import '../Card/CardStyle.css'
 
-const ItemCount = ({stock, initial}) => {
+const ItemCount = ({stock, initial,onAdd}) => {
     const [count, setCount] = useState(initial);
-    const onAdd = () => {
+
+    const handleAdd = () => {
         setCount(prev => prev + 1);
     }
 
@@ -13,15 +13,18 @@ const ItemCount = ({stock, initial}) => {
             setCount(prev => prev - 1);
         }
     }
+
+    const confirm = () => {
+        onAdd(count);
+    }
   return (
-    <Card className='container-card'>
-        <CardContent>
-            <h1>Add to Cart</h1>
+    <>
             <button onClick={handleSubtract} disabled={count === 0}>-</button>
-            <span>{count}</span>
-            <button onClick={onAdd}>+</button>
-        </CardContent>
-    </Card>
+            <span onClick={confirm}>{count}</span>
+            <button onClick={handleAdd}>+</button>
+            <br/>
+            <button>Comprar</button>
+    </>
   )
 }
 
