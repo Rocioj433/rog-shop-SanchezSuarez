@@ -18,13 +18,13 @@ const ItemCount = ({stock, initial,onAdd}) => {
         onAdd(count);
     }
   return (
-    <>
+    <div className='cont-container'>
             <button onClick={handleSubtract} disabled={count === 0}>-</button>
             <span onClick={confirm}>{count}</span>
             <button onClick={handleAdd}>+</button>
             <br/>
             <button>Comprar</button>
-    </>
+    </div>
   )
 }
 

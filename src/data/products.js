@@ -24,3 +24,10 @@ export const prod = [
         img:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_32017_Monitor_Samsung_Curvo_34__Ultrawide_WQHD_a9ddb899-grn.jpg"
     }
 ]
+
+export const product = {
+    id:1,
+    name:'Memoria GeiL DDR4 16GB',
+    price:"100.000",
+    img:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_17140_Memoria_GeiL_DDR4_16GB__2x8GB__3200MHz_Super_Luce_RGB_TUF_Edition_8e9363a8-grn.jpg"
+}
