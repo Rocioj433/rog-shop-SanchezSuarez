@@ -1,7 +1,11 @@
 import { Navbar } from "./components/Navbar/Navbar";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-/* import ItemListContainer from "./components/Card/ItemListContainer"; */
+import ItemListContainer from "./components/Card/ItemListContainer";
 import ItemDetailContainer from "./components/Card/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Product from "./pages/Product";
 
 const darkTheme = createTheme({
   palette: {
@@ -12,9 +16,16 @@ const darkTheme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
+      <BrowserRouter>
       <Navbar />
-      {/* <ItemListContainer title={"Productos recomendados"}  /> */}
-      <ItemDetailContainer/>
+        <Routes>
+          <Route path="/home" element={ <Home />}/>
+          <Route path="/product" element={<Product/>} />
+          <Route path="/category/:category" element={<ItemListContainer title={"Productos recomendados"} />}/>
+          <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          </Routes>
+    </BrowserRouter>
     </ThemeProvider>
   );
 }

@@ -5,14 +5,19 @@
 h1{
     font-size: 14px;
 }
+.css-46bh2p-MuiCardContent-root:last-child {
+    padding-bottom: 24px;
+    display: flex;
+    width: 600px;
+}
 .list-item{
     list-style: none;
     display: flex;
-    padding-left: 400px;
-    padding-right: 400px;
+    padding-left: 250px;
+    padding-right: 90px;
 }
 .list-item li{
-    margin:10px;
+    margin:8px;
 }
 .list-item a{
     text-decoration: none;
@@ -46,10 +51,38 @@ h1{
 }
 .list-item li button:hover::after{
     transform-origin: left;
-    transform: scaleX(1);
-    
+    transform: scaleX(1); 
+}
+.btn{
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    text-transform: none;
+    margin: 6px;
+}
+.btn:hover{
+    background: none !important;
+    box-shadow: none !important;
+}
+.dropdown-menu{
+    margin-bottom: 10px;
+}
+.dropdown-menu .dropdown-item{
+    color: black;
+    background-color: rgb(226, 221, 221);
+    border-radius: 5px;
+    width: 150px;
 }
 .btn-login{
     border: 2px solid gray;
-    padding-left: 100px;
+    padding-left:400px;
+}
+
+@media screen and (max-width: 800px) {
+    .list-item{
+        width: 100%;
+        margin: auto;
+        padding: auto;
+    }
+    
 }
