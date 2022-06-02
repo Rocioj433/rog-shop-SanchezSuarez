@@ -2,7 +2,6 @@ import React,{useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { traerProducts } from '../../data/products'
 import '../Card/CardStyle.css'
-import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 
 const ItemListContainer = () => {
@@ -18,9 +17,7 @@ const ItemListContainer = () => {
 
   return (
     <>
-        <ItemList items={items}>
-          <ItemCount stock={10} initial={1}/>
-        </ItemList>
+        <ItemList items={items}/>
         
     </>
   )

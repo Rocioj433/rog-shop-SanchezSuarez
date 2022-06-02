@@ -1,7 +1,6 @@
 import React from "react";
 import "../Card/CardStyle.css";
 import { Card, CardContent } from "@mui/material";
-import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 const ItemList = ({ items, title }) => {
@@ -24,8 +23,6 @@ const ItemList = ({ items, title }) => {
                   <Link to={`/item/${ItemI.id}`}>
                     <button>Ver detalle</button>
                   </Link>
-                  <br />
-                  <ItemCount stock={ItemI.stock} initial={1} onAdd={() => {}} />
                 </div>
               </div>
             </CardContent>
