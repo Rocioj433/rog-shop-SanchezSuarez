@@ -1,9 +1,12 @@
-import React from "react";
+import React,{useContext, useState} from "react";
 import "../Card/CardStyle.css";
 import { Card, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
+import CartContext from "../../context/CartContext";
 
 const ItemList = ({ items, title }) => {
+  const [showButton, setShowButton] = useState(false);
+  const {addProductToCart} = useContext(CartContext);
   return (
     <div>
       <h1>{title}</h1>
@@ -23,6 +26,9 @@ const ItemList = ({ items, title }) => {
                   <Link to={`/item/${ItemI.id}`}>
                     <button>Ver detalle</button>
                   </Link>
+                  <button onClick={() => addProductToCart({ItemI})}>
+                      comprar
+                  </button>
                 </div>
               </div>
             </CardContent>

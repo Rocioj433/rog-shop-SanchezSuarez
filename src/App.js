@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
+import { CartProvider } from "./context/CartContext";
+import CartWidget from "./components/Card/CartWidget";
 
 const darkTheme = createTheme({
   palette: {
@@ -15,6 +17,7 @@ const darkTheme = createTheme({
 
 function App() {
   return (
+    <CartProvider>
     <ThemeProvider theme={darkTheme}>
       <BrowserRouter>
       <Navbar />
@@ -24,10 +27,11 @@ function App() {
           <Route path="/category/:category" element={<ItemListContainer title={"Productos recomendados"} />}/>
           <Route path="/item/:id" element={<ItemDetailContainer/>}/>
           <Route path="/contact" element={<Contact/>}/>
-          <Route path="/cart" element={<h1>Carrito</h1>}/>
+          <Route path="/cart" element={<CartWidget/>}/>
           </Routes>
     </BrowserRouter>
     </ThemeProvider>
+    </CartProvider>
   );
 }
 

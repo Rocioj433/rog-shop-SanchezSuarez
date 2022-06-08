@@ -5,14 +5,11 @@ import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import '../Card/CardStyle.css'
 
+
 const ItemDetail = ({ data }) => {
   const [quantity, setQuantity] = useState(1);
   const [showButton, setShowButton] = useState(false);
 
-  /* const addToCart = () => {
-    console.log("Added to cart", data);
-    console.log("quantity", quantity);
-  } */
   return (
     <>
       <Card className="card-content">
@@ -36,7 +33,7 @@ const ItemDetail = ({ data }) => {
                   setShowButton={setShowButton}
                 />
                 :
-                <button className="btn-cart"><Link to="/cart">Add to Cart</Link></button>
+                <button className="btn-cart" ><Link to="/cart">Add to Cart</Link></button>
               }
 
             </div>
