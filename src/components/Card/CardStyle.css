@@ -85,3 +85,8 @@ button {
     text-decoration: none;
     color:white;
 }
+.img-cart{
+    margin-left: 50px;
+    width: 110px;
+    height:110px
+}

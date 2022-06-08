@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CartContext from '../../context/CartContext'
 import { Link } from 'react-router-dom';
+import "../Card/CardStyle.css";
 
 const CartWidget = () =>  {
     const { cartListItems } = useContext(CartContext)
@@ -42,24 +43,15 @@ const CartWidget = () =>  {
                             <Link to="/product" >Empezar a comprar</Link>
                         </>
                     )}
-                    {cartListItems.map( (Item) =>{
+                    {cartListItems.map( (ItemI) => {
                         return(
-                            <div>
-                                <p>{Item.name}</p>
-                            </div>
-                        )
-                    })
-
-                    }
-                    {/* {cartListItems.map( (ItemI) => {
-                        return(
-                        <div className='item-cart-prod' key={ItemI.id}>
+                        <div className='item-cart-prod' key={ItemI.ItemI.id}>
                             <div className='cart-prod__image'>
-                                <img src={`/${ItemI.image}`} alt="prod carrito" />
+                                <img className="img-cart" src={`${ItemI.ItemI.img}`} alt="prod carrito" />
                             </div>
                             <div className='cart-prod__info'>
-                                <p>{ItemI.title}</p>
-                                <span>$ {ItemI.price}</span>
+                                <p>{ItemI.ItemI.name}</p>
+                                <span>$ {ItemI.ItemI.price}</span>
                             </div>
                             <div className='cart-prod__action'>
                                 <button>
@@ -68,7 +60,7 @@ const CartWidget = () =>  {
                             </div>
                         </div>
                         )
-                    })} */}
+                    })}
                     
                     
                 </div>

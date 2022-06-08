@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 
 const ItemList = ({ items, title }) => {
-  const [showButton, setShowButton] = useState(false);
   const {addProductToCart} = useContext(CartContext);
   return (
     <div>

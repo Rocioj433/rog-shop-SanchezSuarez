@@ -4,7 +4,7 @@ export const prod = [
         name:'Memoria GeiL DDR4 16GB',
         price:"40.000",
         category:'memorias',
-        img:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_17140_Memoria_GeiL_DDR4_16GB__2x8GB__3200MHz_Super_Luce_RGB_TUF_Edition_8e9363a8-grn.jpg"
+        img:"https://acortar.link/2THgUC"
     },
     {
         id:2,
