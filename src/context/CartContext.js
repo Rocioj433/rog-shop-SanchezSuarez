@@ -1,33 +1,48 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
+import { useState } from "react";
 
-const CartContext = createContext()
+export const CartContext = createContext();
 
-const CartProvider = ({children}) => {
-    const [cartListItems, setCartListItems] = useState([])
-    const [totalPrice, setTotalPrice] = useState(0)
-
-    const addProductToCart = (product) => {
-        let InCart = cartListItems.find(cartItem => cartItem.id === product.id)
-        if(!InCart) {
-            console.log("se agrego el producto:", product)
-            setTotalPrice(totalPrice + product.price)
-            return setCartListItems(cartListItems => [...cartListItems, product])
+const CartContextProvider = ({ children }) => {
+    const [cart, setCart] = useState([]);
+    const [prodsInCart, setProdsInCart] = useState(0);
+    const isProductInCart = (product) => {
+        return cart.find(cartProduct => cartProduct.id === product.id)
+    }
+    const addItem = (product, qty, setOpen, setOpenFail) => {
+        let productInCart = isProductInCart(product)
+        if (productInCart == undefined && product.stock >= qty) {
+            productInCart = { ...product, amountInCart: qty }
+            setCart([...cart, productInCart])
+            setProdsInCart(prodsInCart + qty)
+            setOpen(true)
+        } else if (product.stock > (productInCart.amountInCart + qty)) {
+            productInCart.amountInCart += qty;
+            setProdsInCart(prodsInCart + qty)
+            setOpen(true)
+        } else {
+            setOpenFail(true)
         }
-        console.log("El producto ya se encuentra en el carrito")
     }
-
-    const data = {
-        cartListItems,
-        addProductToCart,
-        totalPrice
+    const removeItem = (id) => {
+        const newCart = cart.filter((product) => product.id !== id)
+        setCart(newCart);
+        const newProdsInCart = newCart.reduce((acc, current) => {
+            return acc + current.amountInCart;
+        },0)
+        setProdsInCart(newProdsInCart);
     }
+    const clear = () => {
+        setCart([])
+        setProdsInCart(0);
+    }
+    return (
 
-    return(
-        <CartContext.Provider value={data}>
+        <CartContext.Provider value={{ cart, addItem, prodsInCart, removeItem, clear }}>
             {children}
         </CartContext.Provider>
-    )
-}
 
-export default CartContext
-export { CartProvider }
+    )
+};
+
+export default CartContextProvider;

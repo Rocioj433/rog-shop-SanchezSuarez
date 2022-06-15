@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Card, CardContent } from "@mui/material";
 import "../Card/CardStyle.css";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import '../Card/CardStyle.css'
+import CartContext from "../../context/CartContext";
 
 
 const ItemDetail = ({ data }) => {
   const [quantity, setQuantity] = useState(1);
   const [showButton, setShowButton] = useState(false);
+  const {addProductToCart} = useContext(CartContext);
 
   return (
     <>
@@ -33,7 +35,7 @@ const ItemDetail = ({ data }) => {
                   setShowButton={setShowButton}
                 />
                 :
-                <button className="btn-cart" ><Link to="/cart">Add to Cart</Link></button>
+                <button className="btn-cart" onClick={() => addProductToCart({data})}><Link to="/cart">Add to Cart</Link></button>
               }
 
             </div>
