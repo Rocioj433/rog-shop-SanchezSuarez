@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import "../Card/CardStyle.css";
 
 const CartWidget = () =>  {
-    const { cartListItems } = useContext(CartContext)
+    const { cartListItems , deleteProduct } = useContext(CartContext)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -54,7 +54,7 @@ const CartWidget = () =>  {
                                 <span>$ {ItemI.ItemI.price}</span>
                             </div>
                             <div className='cart-prod__action'>
-                                <button>
+                                <button onClick={() => deleteProduct(ItemI)}>
                                     <DeleteIcon />
                                 </button>
                             </div>

@@ -15,11 +15,21 @@ const CartProvider = ({children}) => {
         }
         console.log("El producto ya se encuentra en el carrito")
     }
+    const deleteProduct = (product) => {
+        setCartListItems(cartListItems.filter( (cartProduct) => cartProduct.id !== product.id) )
+    }
+
+    const cleanCartProducts = () => {
+        setTotalPrice(0)
+        setCartListItems([])
+    }
 
     const data = {
         cartListItems,
         addProductToCart,
-        totalPrice
+        totalPrice,
+        deleteProduct,
+        cleanCartProducts
     }
 
     return(
