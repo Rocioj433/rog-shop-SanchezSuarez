@@ -6,8 +6,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
+<<<<<<< HEAD
 import Cart from "./pages/Cart";
 import CartContextProvider from "./context/CartContext";
+=======
+import { CartProvider } from "./context/CartContext";
+import CartWidget from "./components/Card/CartWidget";
+import Cart from "./pages/Cart";
+>>>>>>> origin/desafio-cli-#10-a
 
 const darkTheme = createTheme({
   palette: {
