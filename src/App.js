@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Product from "./pages/Product";
 import { CartProvider } from "./context/CartContext";
 import CartWidget from "./components/Card/CartWidget";
+import Cart from "./pages/Cart";
 
 const darkTheme = createTheme({
   palette: {
@@ -27,7 +28,7 @@ function App() {
           <Route path="/category/:category" element={<ItemListContainer title={"Productos recomendados"} />}/>
           <Route path="/item/:id" element={<ItemDetailContainer/>}/>
           <Route path="/contact" element={<Contact/>}/>
-          <Route path="/cart" element={<CartWidget/>}/>
+          <Route path="/cart" element={<Cart/>}/>
           </Routes>
     </BrowserRouter>
     </ThemeProvider>
