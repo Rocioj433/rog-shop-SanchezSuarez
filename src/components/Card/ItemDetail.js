@@ -1,17 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Card, CardContent } from "@mui/material";
 import "../Card/CardStyle.css";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import '../Card/CardStyle.css'
-import CartContext from "../../context/CartContext";
 
 
 const ItemDetail = ({ data }) => {
   const [quantity, setQuantity] = useState(1);
   const [showButton, setShowButton] = useState(false);
-  const {addProductToCart} = useContext(CartContext);
-
   return (
     <>
       <Card className="card-content">
@@ -22,7 +19,7 @@ const ItemDetail = ({ data }) => {
             </div>
             <div className="col-md-6">
               <div className="card-body">
-                <h1 className="card-title">{data.name}</h1>
+                <h1 className="card-title">{data.title}</h1>
                 <p className="card-text">${data.price}</p>
                 <span>3 Cuotas sin interés de $ {data.price / 3}</span>
               </div>
@@ -35,7 +32,7 @@ const ItemDetail = ({ data }) => {
                   setShowButton={setShowButton}
                 />
                 :
-                <button className="btn-cart" onClick={() => addProductToCart({data})}><Link to="/cart">Add to Cart</Link></button>
+                <button className="btn-cart"><Link to="/cart">Add to Cart</Link></button>
               }
 
             </div>

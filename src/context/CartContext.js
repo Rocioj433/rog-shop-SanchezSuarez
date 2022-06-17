@@ -1,48 +1,31 @@
-import { createContext } from "react";
-import { useState } from "react";
+import { createContext, useState } from "react";
 
-export const CartContext = createContext();
+export const CartContext = createContext()
 
-const CartContextProvider = ({ children }) => {
-    const [cart, setCart] = useState([]);
-    const [prodsInCart, setProdsInCart] = useState(0);
-    const isProductInCart = (product) => {
-        return cart.find(cartProduct => cartProduct.id === product.id)
-    }
-    const addItem = (product, qty, setOpen, setOpenFail) => {
-        let productInCart = isProductInCart(product)
-        if (productInCart == undefined && product.stock >= qty) {
-            productInCart = { ...product, amountInCart: qty }
-            setCart([...cart, productInCart])
-            setProdsInCart(prodsInCart + qty)
-            setOpen(true)
-        } else if (product.stock > (productInCart.amountInCart + qty)) {
-            productInCart.amountInCart += qty;
-            setProdsInCart(prodsInCart + qty)
-            setOpen(true)
-        } else {
-            setOpenFail(true)
+const CartProvider = ({children}) => {
+    const [cartListItems, setCartListItems] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
+    console.log(cartListItems)
+    const addProductToCart = (product) => {
+        let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
+        if(!isInCart) {
+            console.log("se agrego el producto:", product)
+            setTotalPrice(totalPrice + product.price)
+            return setCartListItems(cartListItems => [...cartListItems, product])
         }
     }
-    const removeItem = (id) => {
-        const newCart = cart.filter((product) => product.id !== id)
-        setCart(newCart);
-        const newProdsInCart = newCart.reduce((acc, current) => {
-            return acc + current.amountInCart;
-        },0)
-        setProdsInCart(newProdsInCart);
-    }
-    const clear = () => {
-        setCart([])
-        setProdsInCart(0);
-    }
-    return (
 
-        <CartContext.Provider value={{ cart, addItem, prodsInCart, removeItem, clear }}>
+    const data = {
+        cartListItems,
+        addProductToCart,
+        totalPrice
+    }
+
+    return(
+        <CartContext.Provider value={data}>
             {children}
         </CartContext.Provider>
-
     )
-};
+}
 
-export default CartContextProvider;
+export default   CartProvider // se exporta el provider para que pueda ser usado en el componente que lo requiera
