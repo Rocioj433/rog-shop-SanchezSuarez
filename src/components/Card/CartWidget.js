@@ -1,4 +1,9 @@
+import { Delete } from '@mui/icons-material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Menu } from '@mui/material';
+import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () =>  {
     const { cartListItems , deleteProduct } = useContext(CartContext)
@@ -43,12 +48,12 @@ const CartWidget = () =>  {
                                 <img className="img-cart" src={`${ItemI.ItemI.img}`} alt="prod carrito" />
                             </div>
                             <div className='cart-prod__info'>
-                                <p>{ItemI.ItemI.name}</p>
+                                <p>{ItemI.ItemI.title}</p>
                                 <span>$ {ItemI.ItemI.price}</span>
                             </div>
                             <div className='cart-prod__action'>
                                 <button onClick={() => deleteProduct(ItemI)}>
-                                    <DeleteIcon />
+                                    <Delete />
                                 </button>
                             </div>
                         </div>

@@ -5,13 +5,15 @@ export const CartContext = createContext()
 const CartProvider = ({children}) => {
     const [cartListItems, setCartListItems] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
-    console.log(cartListItems)
+    
     const addProductToCart = (product) => {
         let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
         if(!isInCart) {
             console.log("se agrego el producto:", product)
             setTotalPrice(totalPrice + product.price)
             return setCartListItems(cartListItems => [...cartListItems, product])
+        }else{
+            console.log("No hay ningun producto en el carrito")
         }
     }
     const deleteProduct = (product) => {
