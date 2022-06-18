@@ -15,11 +15,11 @@ const ItemList = ({ items, title }) => {
             <CardContent className="row">
               <div className="row g-0">
                 <div className="col-md-6">
-                  <img src={ItemI.img} alt={ItemI.name} />
+                  <img src={ItemI.img} alt={ItemI.title} />
                 </div>
                 <div className="col-md-6">
                   <div className="card-body">
-                    <h1 className="card-title">{ItemI.name}</h1>
+                    <h1 className="card-title">{ItemI.title}</h1>
                     <p className="card-text">Price: ${ItemI.price}</p>
                     <p className="card-text">Stock: {ItemI.stock}</p>
                   </div>

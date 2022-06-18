@@ -27,7 +27,7 @@ export const prod = [
         id:4,
         title:'Monitor Samsung  27"',
         price:100000,
-        category:'monitor',
+        category:'monitores',
         stock:20,
         img:"https://compragamer.net/pga/imagenes_publicadas/compragamer_Imganen_general_32017_Monitor_Samsung_Curvo_34__Ultrawide_WQHD_a9ddb899-grn.jpg"
     },{
