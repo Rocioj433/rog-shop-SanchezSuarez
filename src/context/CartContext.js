@@ -40,4 +40,4 @@ const CartProvider = ({children}) => {
     )
 }
 
-export default   CartProvider // se exporta el provider para que pueda ser usado en el componente que lo requiera
+export default CartProvider 
