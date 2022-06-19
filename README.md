@@ -1,24 +1,24 @@
 # ROG-SHOP
-Project developed by Rocio Sanchez for the ReactJs course of coderhouse, where everything that has been seen in the live classes has been applied. What I saw in class was:
-  *installation and configuration of the environment
-  *JSX & transpiling
-  *Components
-  *Promises, asynchronism and map
-  *Hooks
-  *Use of firebase
+Project developed by Rocio Sanchez for the ReactJs course of coderhouse, where everything that has been seen in the live classes has been applied. What I saw in class was:<br>
+  Installation and configuration of the environment<br>
+  JSX & transpiling<br>
+  Components<br>
+  Promises, asynchronism and map <br>
+  Hooks<br>
+  Use of firebase
 
 ## Content
-This proyect has 10 branches:
-  *main
-  *desafio-cli-#3
-  *desafio-cli-#4
-  *desafio-cli-#4
-  *desafio-cli-#5
-  *desafio-cli-#6
-  *desafio-cli-#8
-  *desafio-cli-#9
-  *desafio-cli-#10
-  *desafio-cli-#11
+This proyect has 10 branches:<br>
+  main<br>
+  desafio-cli-#3<br>
+  desafio-cli-#4<br>
+  desafio-cli-#4<br>
+  desafio-cli-#5<br>
+  desafio-cli-#6<br>
+  desafio-cli-#8<br>
+  desafio-cli-#9<br>
+  desafio-cli-#10<br>
+  desafio-cli-#11
 
 ## Demo
 If you want to see the demo of this proyect deployed, you can visit [Demo of the proyect](https://anabelisa.co/tips-para-hacer-un-buen-readme-md/)
@@ -26,18 +26,18 @@ If you want to see the demo of this proyect deployed, you can visit [Demo of the
 ## How to clone
 In the project directory, you can run:
 
-`npm start`
+`npm start`<br>
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in your browser.
 
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-`npm test`
+`npm test`<br>
 Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
 
-`npm run build`
+`npm run build`<br>
 Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -46,7 +46,7 @@ Your app is ready to be deployed!
 
 See the section about deployment for more information.
 
-`npm run eject`
+`npm run eject`<br>
 Note: this is a one-way operation. Once you eject, you can't go back!
 
 If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
