@@ -24,7 +24,7 @@ const ItemListContainer = () => {
       prod.id = doc.id
       return prod
     })
-    console.log("productList", productList)
+    console.log(productList)
   }
   const filterFirebase = async () => {
     const productRef = collection(db, 'product')

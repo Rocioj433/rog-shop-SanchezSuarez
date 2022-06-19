@@ -3,7 +3,6 @@ import { Container, Button } from "@mui/material"
 import { Delete } from "@mui/icons-material"
 import { CartContext } from "../context/CartContext"
 import { Link } from "react-router-dom"
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 
 const Cart = () => {
     const { cartListItems, totalPrice} = useContext(CartContext)
