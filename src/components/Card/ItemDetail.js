@@ -32,7 +32,7 @@ const ItemDetail = ({ data }) => {
                   setShowButton={setShowButton}
                 />
                 :
-                <button className="btn-cart"><Link to="/cart">Add to Cart</Link></button>
+                <button className="btn-cart"><Link to="/cart" href="#">Add to Cart</Link></button>
               }
 
             </div>

@@ -132,7 +132,7 @@ export const getItem = (id) => {
  }
 
 export const traerProducts = (cat) =>{
-    return new Promise( (resolve,reject) => {
+    return new Promise( (resolve) => {
         const productFilter = prod.filter((prod) => prod.category === cat);
         setTimeout(() => {
             resolve(productFilter);

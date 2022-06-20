@@ -23,7 +23,7 @@ const ItemList = ({ items, title }) => {
                     <p className="card-text">Price: ${ItemI.price}</p>
                     <p className="card-text">Stock: {ItemI.stock}</p>
                   </div>
-                  <Link to={`/item/${ItemI.id}`}>
+                  <Link to={`/item/${ItemI.id}`} href="#">
                     <button>Ver detalle</button>
                   </Link>
                   <button onClick={() => addProductToCart({ItemI})}>
@@ -33,7 +33,6 @@ const ItemList = ({ items, title }) => {
               </div>
             </CardContent>
           </Card>
-          ;
         </div>
       ))}
     </React.Fragment>

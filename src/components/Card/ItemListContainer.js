@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'/* 
-import { traerProducts } from '../../data/products' */
+import { useParams } from 'react-router-dom'
 import '../Card/CardStyle.css'
 import ItemList from './ItemList'
 import { collection, getDocs, query, where } from "firebase/firestore";
@@ -24,7 +23,7 @@ const ItemListContainer = () => {
       prod.id = doc.id
       return prod
     })
-    console.log(productList)
+    return productList
   }
   const filterFirebase = async () => {
     const productRef = collection(db, 'product')

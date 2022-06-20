@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
 
       getProduct()
       .then( (prod) => {
-        console.log("Respuesta firebase: ",prod)
           setProductDetail(prod)
       })
   }, [id])

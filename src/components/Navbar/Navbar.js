@@ -12,12 +12,12 @@ export const Navbar = () => {
           <h1>Republic of Gamers</h1>
           {
             <ul className="list-item">
-              <Link to="/home">
+              <Link to="/home"  href="#">
                 <li>
                   <Button>Home</Button>
                 </li>
               </Link>
-              <Link to="/category">
+              <Link to="/category"  href="#">
                 <div className="dropdown">
                   <button
                     className="btn  dropdown-toggle"
@@ -28,22 +28,22 @@ export const Navbar = () => {
                     Categories
                   </button>
                   <ul className="dropdown-menu">
-                    <Link to="/category/memorias">
+                    <Link to="/category/memorias"  href="#">
                       <li className="dropdown-item">
                         <Button>Memorias</Button>
                       </li>
                     </Link>
-                    <Link to="/category/placas">
+                    <Link to="/category/placas"  href="#">
                       <li className="dropdown-item">
                         <Button>Placa de Video</Button>
                       </li>
                     </Link>
-                    <Link to="/category/procesadores">
+                    <Link to="/category/procesadores"  href="#">
                       <li className="dropdown-item">
                         <Button>Procesadores</Button>
                       </li>
                     </Link>
-                    <Link to="/category/monitores">
+                    <Link to="/category/monitores"  href="#">
                     <li className="dropdown-item">
                       <Button>Monitores</Button>
                     </li>
@@ -51,12 +51,12 @@ export const Navbar = () => {
                   </ul>
                 </div>
               </Link>
-              <Link to="/product">
+              <Link to="/product"  href="#">
                 <li>
                   <Button>Product</Button>
                 </li>
               </Link>
-              <Link to="/contact">
+              <Link to="/contact"  href="#">
                 <li>
                   <Button>Contact</Button>
                 </li>
