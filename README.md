@@ -7,19 +7,6 @@ Project developed by Rocio Sanchez for the ReactJs course of coderhouse, where e
   Hooks<br>
   Use of firebase
 
-## Content
-This proyect has 10 branches:<br>
-  main<br>
-  desafio-cli-#3<br>
-  desafio-cli-#4<br>
-  desafio-cli-#4<br>
-  desafio-cli-#5<br>
-  desafio-cli-#6<br>
-  desafio-cli-#8<br>
-  desafio-cli-#9<br>
-  desafio-cli-#10<br>
-  desafio-cli-#11
-
 ## Demo
 If you want to see the demo of this proyect deployed, you can visit [Demo of the proyect](https://anabelisa.co/tips-para-hacer-un-buen-readme-md/)
 
