@@ -47,5 +47,5 @@ To install and run this proyect just type and execute
 npm install
 ```
 ## Preview
-![](/assets/preview.gif)
+<img src="https://github.com/Rocioj433/rog-shop-SanchezSuarez/blob/main/src/assets/preview.gif" />
 
