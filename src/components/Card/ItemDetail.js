@@ -10,7 +10,7 @@ const ItemDetail = ({ data }) => {
   const [quantity, setQuantity] = useState(1);
   const [showButton, setShowButton] = useState(false);
   return (
-    <>
+    <React.Fragment>
       <Card className="card-content">
         <CardContent className="row">
           <div className="row g-0">
@@ -39,7 +39,7 @@ const ItemDetail = ({ data }) => {
           </div>
         </CardContent>
       </Card>
-    </>
+    </React.Fragment>
   );
 };
 

@@ -10,8 +10,8 @@ const CartProvider = ({children}) => {
         let isInCart = cartListItems.find(cartItem => cartItem.id === product.id)
         if(!isInCart) {
             console.log("se agrego el producto:", product)
-            setTotalPrice(totalPrice + product.price)
-            return setCartListItems(cartListItems => [...cartListItems, product])
+            setTotalPrice((totalPrice + product.ItemI.price))
+            setCartListItems(cartListItems => [...cartListItems, product])
         }else{
             console.log("No hay ningun producto en el carrito")
         }
@@ -30,7 +30,7 @@ const CartProvider = ({children}) => {
         addProductToCart,
         totalPrice,
         deleteProduct,
-        cleanCartProducts
+        cleanCartProducts,
     }
 
     return(

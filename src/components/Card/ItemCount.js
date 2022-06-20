@@ -19,14 +19,14 @@ const ItemCount = ({stock, initial,onAdd,actualizarCantidad,quantity,setShowButt
         onAdd(count);
     }
   return (
-    <>  
+    <React.Fragment>  
     <div className='cont-container'>
             <button onClick={handleSubtract} disabled={count === 0}>-</button>
             <span onClick={confirm}>{count}</span>
             <button onClick={handleAdd}>+</button>
     </div>
     <button onClick={() => setShowButton(true)}>Comprar</button>
-    </>
+    </React.Fragment>
   )
 }
 

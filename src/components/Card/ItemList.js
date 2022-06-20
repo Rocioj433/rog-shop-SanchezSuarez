@@ -7,7 +7,7 @@ import { CartContext } from "../../context/CartContext";
 const ItemList = ({ items, title }) => {
   const { addProductToCart } = useContext(CartContext);
   return (
-    <div>
+    <React.Fragment>
       <h1>{title}</h1>
       {items.map((ItemI) => (
         <div className="card-container" key={ItemI.id}>
@@ -36,7 +36,7 @@ const ItemList = ({ items, title }) => {
           ;
         </div>
       ))}
-    </div>
+    </React.Fragment>
   );
 };
 
