@@ -7,9 +7,6 @@ Project developed by Rocio Sanchez for the ReactJs course of coderhouse, where e
   Hooks<br>
   Use of firebase
 
-## Demo
-If you want to see the demo of this proyect deployed, you can visit [Demo of the proyect](https://anabelisa.co/tips-para-hacer-un-buen-readme-md/)
-
 ## How to clone
 In the project directory, you can run:
 
